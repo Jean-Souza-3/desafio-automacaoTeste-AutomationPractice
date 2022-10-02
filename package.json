@@ -1,0 +1,17 @@
+{
+  "name": "dojonextqa03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "@playwright/test": "^1.26.1"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^8.6.0"
+  }
+}
