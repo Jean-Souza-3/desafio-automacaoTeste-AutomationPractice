@@ -5,7 +5,7 @@ const { faker } = require ('@faker-js/faker');
 setDefaultTimeout(60 * 10000);
 const nome = faker.name.firstName();
 const sobrenome = faker.name.lastName();
-const email = `${nome}${sobrenome}@outlook.com`
+const email = `${nome}${sobrenome}@outlook.com`;
 
 Given('que esteja na home do website', async function () {
     await page.goto('http://automationpractice.com/index.php');
@@ -42,11 +42,11 @@ When('clico no botão registar', async function () {
     await page.waitForTimeout(5000);
 });
 
-Then('o cadastro é realizado com sucesso exibindo a mensagem {string}', async function (string) {
-    
+Then('o cadastro é realizado com sucesso exibindo a mensagem {string}', async function (welcome) {
+    await expect (page.locator('xpath=//*[@id="center_column"]/p')).toContainText(welcome);
 });
 
 Then('exibe o o nome do usuário cadastrado no menu', async function () {
-    // Write code here that turns the phrase above into concrete actions
+    await expect (page.locator('xpath=//*[@id="header"]/div[2]/div/div/nav/div[1]/a/span')).toContainText(`${nome} ${sobrenome}`);
     
 });
