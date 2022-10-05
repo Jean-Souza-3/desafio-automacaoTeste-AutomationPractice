@@ -1,11 +1,10 @@
 const { setDefaultTimeout, Given, When, Then } = require('@cucumber/cucumber');
-const { expect } = require('@playwright/test');
 const { faker } = require('@faker-js/faker');
-const { HomePage } = require('../pages/create_account/criar_conta/home_page');
-const { SignInPage } = require('../pages/create_account/criar_conta/sign_in_page');
-const { AccountCreationPage } = require('../pages/create_account/criar_conta/account_creation_page');
-const { MyAccountPage } = require('../pages/create_account/criar_conta/my_account_page');
-const { SignUpPage } = require('../pages/create_account/logar_conta/sign_up_page');
+const { HomePage } = require('../../pages/create_account/criar_conta/home_page');
+const { SignInPage } = require('../../pages/create_account/criar_conta/sign_in_page');
+const { AccountCreationPage } = require('../../pages/create_account/criar_conta/account_creation_page');
+const { MyAccountPage } = require('../../pages/create_account/criar_conta/my_account_page');
+const { SignUpPage } = require('../../pages/create_account/logar_conta/sign_up_page');
 
 setDefaultTimeout(60 * 10000);
 const nome = faker.name.firstName();
