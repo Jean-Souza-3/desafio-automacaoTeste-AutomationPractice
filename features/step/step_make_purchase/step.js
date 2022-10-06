@@ -17,27 +17,25 @@ Given('que esteja na home do site', async function () {
 
 When('eu clico em already registered', async function () {
     await signUpPage.logarConta(email, pass);
-    
 });
 
-When('acesso a categoria {string} selecionando {string}', async function (categoria, subcategoria) {
-    await page.locator('xpath=//*[@id="block_top_menu"]/ul/li[1]/a').click();
+When('acesso a categoria Women selecionando {string}', async function (categoria) {
+    await page.hover('xpath=//*[@id="block_top_menu"]/ul/li[1]/a');
+    await page.locator('xpath=//*[@id="block_top_menu"]/ul/li[1]/ul/li[2]/ul/li[3]/a').click();
     await expect (page.locator('xpath=//*[@id="center_column"]/div[1]/div/div/span')).toContainText(categoria);
-    await page.locator('xpath=//*[@id="categories_block_left"]/div/ul/li[2]/span').click();
-    await page.locator('xpath=//*[@id="categories_block_left"]/div/ul/li[2]/ul/li[3]/a').click();
-    await expect (page.locator('xpath=//*[@id="center_column"]/div[1]/div/div/span')).toContainText(subcategoria);
-    
 });
 
 When('seleciono o produto a ser comprado {string}', async function (produto) {
-    await page.locator(`div[class*=right-block] h5 a[title*='${produto}']`).click();
-    await page.locator('xpath=//*[@id="group_1"]').selectOption('2');
-    await page.locator('xpath=//*[@id="add_to_cart"]/button/span').click();
+    await page.locator('xpath=//*[@id="layered_id_attribute_group_2"]').check();
+    await page.locator('xpath=//*[@id="layered_id_attribute_group_15"]').click();
+    await page.waitForTimeout(10000);
+    await page.hover('[id*=center_column] ul[class*=product_list] li div div[class*=right-block] h5 a[title*="Printed Chiffon Dress"]');
+    //await expect (page.locator('[id*=center_column] ul[class*=product_list] li div div[class*=right-block] h5 a[title*="Printed Chiffon Dress"]')).toContainText(` 							${produto}						`);
+    await page.locator('xpath=//*[@id="center_column"]/ul/li/div/div[2]/div[2]/a[1]').click();
+    await page.pause();
+    await expect (page.locator('xpath=//*[@id="layer_cart"]/div[1]/div[1]/h2')).toContainText('Product successfully added to your shopping cart'
+    ); 
     await page.locator('xpath=//*[@id="layer_cart"]/div[1]/div[2]/div[4]/a').click();
-    //const copia = await page.content();
-    //const fs = require('fs');
-    //fs.writeFileSync('summer_dresses.html', copia);
-    
 });
 
 Then('redireciona para carrinho para finalizar a compra', async function () {
