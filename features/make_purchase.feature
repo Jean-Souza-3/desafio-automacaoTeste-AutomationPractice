@@ -6,4 +6,4 @@ Feature: Efetuar compra no website My Store
         And acesso a categoria "Women" selecionando "Summer Dresses"
         And seleciono o produto a ser comprado "Printed Chiffon Dress"
         Then redireciona para carrinho para finalizar a compra
-        And em histórico de compras envio uma mensagem de agradrcimento ao fornecedor do produto "I loved the dress"
+        And em histórico de compras envio uma mensagem de agradecimento ao fornecedor do produto "I loved the dress"
