@@ -62,3 +62,15 @@ Esse projeto foi desenvolvido para verificar o conhecimento em automação de te
           
 ## :framed_picture:Gifs
 
+* Criar Conta
+
+![Sequência 01_5](https://user-images.githubusercontent.com/100387707/198857546-e5b8b997-4ea1-41b9-a892-488d885a9d48.gif)
+<br><br>
+* Logar Conta
+
+![Sequência 01_4](https://user-images.githubusercontent.com/100387707/198857310-5a57d66c-2177-4a1e-b603-ce79d31ce329.gif)
+<br><br>
+* Efetuar Compra com Sucesso
+
+![Sequência 01_6](https://user-images.githubusercontent.com/100387707/198858058-dbeb7701-c02b-4451-b3f2-965b0616fadf.gif)
+
