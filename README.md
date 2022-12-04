@@ -27,38 +27,13 @@ Esse projeto foi desenvolvido para verificar o conhecimento em automação de te
 
     2. Instale as dependências do playwright:
         ```
-        npm init playwright@latest
+        npm install playwright
         ```
-
-       1. Selecione javascript
-           ```
-           Do you want to use TypeScript or JavaScript?
-           Javascript
-           ```
-
-       1. Salve o nome da pasta como tests
-          ```
-          Where to put your end-to-end tests?
-          tests
-          ```
-
-       1. Salve o nome da pasta como tests
-          ```
-           Install Playwright browsers (can be done manually via 'npx playwright install')?(Y/n)
-           pressione Y
-          ```
- 
-       1. Salve o nome da pasta como tests
-          ```
-           :\playwright.config.js already exists. Override it? (y/N)
-           pressione N
-          ```
-
-       1. Salve o nome da pasta como tests
-          ```
-           :\tests-examples\demo-todo-app.spec.js already exists. Override it? (y/N)
-           pressione N
-          ```
+    
+    3. Comando para rodar o projeto:
+        ```
+        npx playwright test
+        ```
           
 ## :framed_picture:Gifs
 
