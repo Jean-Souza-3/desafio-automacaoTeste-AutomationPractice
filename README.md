@@ -22,7 +22,7 @@ Esse projeto foi desenvolvido para verificar o conhecimento em automação de te
 
     1. Clone o projeto no local desejado:
         ```
-        git clone https://github.com/Jean-Souza-3/desafio-automacaoTeste-AutomationPractice.git testAutomation
+        git clone https://github.com/Jean-Souza-3/desafio-automacaoTeste-AutomationPractice.git
         ```
 
     2. Instale as dependências do playwright:
